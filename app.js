@@ -45,3 +45,11 @@ document.getElementById('getComments').addEventListener('click', () => {
     liveVideoId = document.getElementById("liveVideoId").value
     updateCommentPool();
 });
+
+function copytable(el) {
+    var urlField = document.getElementById(el)   
+    var range = document.createRange()
+    range.selectNode(urlField)
+    window.getSelection().addRange(range) 
+    document.execCommand('copy')
+}

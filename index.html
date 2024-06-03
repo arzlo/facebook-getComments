@@ -8,24 +8,34 @@
 </head>
 <body>
     <div class="container">
-        <div class="d-flex justify-content-center">
             <div class="row">
-                <h1>Facebook Live Comments</h1>
-                <input class="form-control mt-2" type="password" id="accessToken" placeholder="Access Token" />
-                <input class="form-control mt-2" type="password" id="liveVideoId" placeholder="Live Video ID" />
-                <input class="form-control mt-2" type="text" id="wordFilter" placeholder="!raffle" />
-                <button class="btn btn-success mt-2 mb-2" id="getComments">Get Comments</button>
-                <table class="table" id="commentPool">
-                    <thead>
-                        <tr>
-                            <th>Viewer ID</th>
-                            <th>Viewer Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Participants will be added here -->
-                    </tbody>
-                </table>
+                <div class="col col-lg-12">
+                    <h1>Facebook Live Comments</h1>
+                    <input class="form-control mt-2" type="password" id="accessToken" placeholder="Access Token" />
+                    <input class="form-control mt-2" type="password" id="liveVideoId" placeholder="Live Video ID" />
+                    <input class="form-control mt-2" type="text" id="wordFilter" placeholder="!raffle" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-12">
+                    <button type="button" class="btn btn-success mt-2 mb-2" id="getComments">Get Comments</button>
+                    <button type="button" class="btn btn-primary mt-2 mb-2" id="copyTable" onClick="copytable('commentPool')">Copy Table Data</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-12">
+                    <table class="table" id="commentPool">
+                        <thead>
+                            <tr>
+                                <th>Viewer ID</th>
+                                <th>Viewer Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Participants will be added here -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
